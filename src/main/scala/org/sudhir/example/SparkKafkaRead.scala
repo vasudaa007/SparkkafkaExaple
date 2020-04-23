@@ -1,5 +1,17 @@
 package org.sudhir.example
-
+import org.apache.spark.sql.avro._
+import org.apache.spark.sql.SparkSession
+import org.apache.kafka.clients.consumer.ConsumerRecord
+import org.apache.kafka.common.serialization.StringDeserializer
+import org.apache.kafka.common.config.SslConfigs
+import org.apache.spark.sql.streaming.ProcessingTime
+import org.apache.spark.SparkConf
+import java.util.Properties
+import org.apache.spark.SparkContext
+import org.apache.avro.SchemaBuilder
+import org.apache.spark.sql.functions._
+import org.apache.spark.sql._
+import org.apache.spark.sql.SaveMode
 object example {
   def main(args: Array[String]): Unit = {
 
